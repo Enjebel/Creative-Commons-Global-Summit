@@ -25,7 +25,7 @@ body {
     padding: 2rem;
 }
 
-/* ✅ Navbar */
+
 .navbar {
     background-color: var(--white);
     color: var(--primary-color);
@@ -82,7 +82,6 @@ body {
     color: var(--secondary-color);
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -110,7 +109,7 @@ body {
     }
 }
 
-/* Header section */
+
 .hero {
     text-align: center;
     padding: 4rem 0 2rem;
@@ -123,15 +122,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 3.5rem;
-    color: var(--secondary-color);
+    color: #d84336;
     margin-bottom: 1rem;
     letter-spacing: -0.05em;
 }
 
-.hero h2 {
+.hero h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.8rem;
+    color: #d84336;
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
@@ -163,7 +163,6 @@ body {
     line-height: 1.8;
 }
 
-/* Date section */
 .date-section {
     text-align: center;
     padding: 1rem 0 3rem;
@@ -187,7 +186,6 @@ body {
     max-width: 800px;
 }
 
-/* Main Program Section */
 .program-section {
     background-color: var(--primary-color);
     color: var(--white);
@@ -252,7 +250,7 @@ body {
     line-height: 1.6;
 }
 
-/* Button section */
+
 .cta-section {
     text-align: center;
     padding: 3rem 0;
@@ -280,7 +278,6 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Footer */
 .footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -317,7 +314,6 @@ body {
     line-height: 1.7;
 }
 
-/* Responsive adjustments */
 @media (max-width: 900px) {
     .program-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -411,54 +407,96 @@ body {
     color: var(--dark-gray);
   }
 
-  .speakers-section {
-    padding: 4rem 2rem;
-    background-color: #fdfdfd;
-  }
+  
 
   .speakers-grid {
-    max-width: 1100px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr); 
     gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
   }
 
   .speaker-card {
-    background-color: var(--white);
-    border: 1px solid var(--light-gray);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     text-align: center;
+    width: 100%;
+    max-width: 300px;
   }
 
-  .speaker-photo {
+  .speaker-photo img {
     width: 100%;
-    height: 200px;
-    background-color: #ccc;
-    border-radius: 6px;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
     margin-bottom: 1rem;
   }
 
   .speaker-name {
     font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
   }
 
   .speaker-title {
-    font-size: 0.95rem;
-    color: var(--dark-gray);
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
   }
 
   .speaker-bio {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #333;
   }
+
+  /* Medium screen: 2 columns */
+  @media (max-width: 900px) {
+    .speakers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Small screen: 1 column */
+  @media (max-width: 600px) {
+    .speakers-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+  @media (max-width: 600px) {
+    .speakers-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .speaker-photo img {
+      max-width: 120px;
+    }
+  }
+
+
+  
+  /* Responsive layout for mobile */
+  @media (max-width: 768px) {
+    .speakers-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .speaker-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .speaker-photo img {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  
 
   .register-section {
     padding: 4rem 2rem;
