@@ -480,7 +480,7 @@ body {
 
 
   
-  /* Responsive layout for mobile */
+
   @media (max-width: 768px) {
     .speakers-grid {
       grid-template-columns: 1fr;
